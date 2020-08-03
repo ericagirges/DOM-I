@@ -40,3 +40,41 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const nav = document.querySelector("nav");
+
+const navItem1 = nav.querySelector("a");
+navItem1.textContent = "Services";
+navItem1.classList.add("nav-item-1");
+
+const navItem2 =navItem1.nextElementSibling;
+navItem2.textContent = "Product";
+navItem2.classList.add("nav-item-2");
+
+const navItem3 = navItem2.nextElementSibling;
+navItem3.textContent = "Vision";
+navItem3.classList.add("nav-item-3");
+
+const navItem4 = navItem3.nextElementSibling;
+navItem4.textContent = "Features";
+navItem4.classList.add("nav-item-4");
+
+const navItem5 = navItem4.nextElementSibling;
+navItem5.textContent = "About";
+navItem5.classList.add("nav-item-5");
+
+const navItem6 = navItem5.nextElementSibling;
+navItem6.textContent = "Contact";
+navItem6.classList.add("nav-item-6");
+
+const ctaText = document.querySelector(".cta-text");
+
+const mainHeading = ctaText.querySelector("h1");
+mainHeading.textContent = "DOM Is Awesome";
+
+const button = ctaText.querySelector("button");
+button.textContent = "Get Started";
+
+const cta = document.querySelector(".cta");
+const imgCodeSnip = cta.querySelector("img");
+imgCodeSnip.src = "img/header-img.png"
