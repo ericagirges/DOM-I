@@ -119,3 +119,36 @@ contactTexts[2].textContent = siteContent["contact"]["email"];
 const footer = document.querySelector("footer");
 const footerText = footer.querySelector("p");
 footerText.textContent = siteContent["footer"]["copyright"];
+
+
+// change color
+function makeGreen(element){
+  element.style.color = "green";
+};
+
+makeGreen(navItem1);
+makeGreen(navItem2);
+makeGreen(navItem3);
+makeGreen(navItem4);
+makeGreen(navItem5);
+makeGreen(navItem6);
+
+
+
+// append 
+
+const blogLink = document.createElement("a");
+const resourcesLink = document.createElement("a");
+
+blogLink.textContent = "Blog";
+blogLink.href = "#";
+resourcesLink.textContent = "Resources";
+resourcesLink.href = "#";
+
+nav.appendChild(blogLink);
+nav.prepend(resourcesLink);
+
+makeGreen(blogLink);
+makeGreen(resourcesLink);
+
+
