@@ -114,3 +114,8 @@ contactTexts[0].textContent = siteContent["contact"]["address"];
 contactTexts[1].textContent = siteContent["contact"]["phone"];
 contactTexts[2].textContent = siteContent["contact"]["email"];
 
+
+// footer
+const footer = document.querySelector("footer");
+const footerText = footer.querySelector("p");
+footerText.textContent = siteContent["footer"]["copyright"];
