@@ -39,8 +39,10 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+
+// Nav Header
 const nav = document.querySelector("nav");
 
 const navItem1 = nav.querySelector("a");
@@ -67,6 +69,8 @@ const navItem6 = navItem5.nextElementSibling;
 navItem6.textContent = "Contact";
 navItem6.classList.add("nav-item-6");
 
+
+// CTA H1 and Image
 const ctaText = document.querySelector(".cta-text");
 
 const mainHeading = ctaText.querySelector("h1");
@@ -76,5 +80,28 @@ const button = ctaText.querySelector("button");
 button.textContent = "Get Started";
 
 const cta = document.querySelector(".cta");
+
 const imgCodeSnip = cta.querySelector("img");
-imgCodeSnip.src = "img/header-img.png"
+imgCodeSnip.src = "img/header-img.png";
+
+
+// .text-content and Image
+const allContent = document.querySelectorAll(".text-content");
+
+function updateInfo(h4Text, pText, i){
+  let newH4 = allContent[i].querySelector("h4");
+  newH4.textContent = h4Text;
+  let newInfo = allContent[i].querySelector("p");
+  newInfo.textContent = pText;
+}
+
+updateInfo("Features", "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", 0);
+
+updateInfo("About", "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", 1);
+
+updateInfo("Services", "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", 2);
+
+updateInfo("Product", "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.", 3);
+
+const middleImg = document.getElementById("middle-img");
+middleImg.src = "img/mid-page-accent.jpg";
