@@ -45,22 +45,24 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // Nav Header
 const nav = document.querySelector("nav");
 
-const navItem1 = nav.querySelector("a");
+const allNavLinks = nav.querySelectorAll("a");
+
+const navItem1 = allNavLinks[0]
 navItem1.textContent = siteContent["nav"]["nav-item-1"];
 
-const navItem2 =navItem1.nextElementSibling;
+const navItem2 = allNavLinks[1]
 navItem2.textContent = siteContent["nav"]["nav-item-2"];
 
-const navItem3 = navItem2.nextElementSibling;
+const navItem3 = allNavLinks[2];
 navItem3.textContent = siteContent["nav"]["nav-item-3"];
 
-const navItem4 = navItem3.nextElementSibling;
+const navItem4 = allNavLinks[3];
 navItem4.textContent = siteContent["nav"]["nav-item-4"];
 
-const navItem5 = navItem4.nextElementSibling;
+const navItem5 = allNavLinks[4];
 navItem5.textContent = siteContent["nav"]["nav-item-5"];
 
-const navItem6 = navItem5.nextElementSibling;
+const navItem6 = allNavLinks[5];
 navItem6.textContent = siteContent["nav"]["nav-item-6"];
 
 
@@ -123,21 +125,12 @@ footerText.textContent = siteContent["footer"]["copyright"];
 
 
 // change color
-function makeGreen(element){
+allNavLinks.forEach(element => {
   element.style.color = "green";
-};
-
-makeGreen(navItem1);
-makeGreen(navItem2);
-makeGreen(navItem3);
-makeGreen(navItem4);
-makeGreen(navItem5);
-makeGreen(navItem6);
-
+});
 
 
 // append 
-
 const blogLink = document.createElement("a");
 const resourcesLink = document.createElement("a");
 
@@ -146,8 +139,8 @@ blogLink.href = "#";
 resourcesLink.textContent = "Resources";
 resourcesLink.href = "#";
 
-nav.appendChild(blogLink);
-nav.prepend(resourcesLink);
+allNavLinks.appendChild(blogLink);
+allNavLinks.prepend(resourcesLink);
 
 makeGreen(blogLink);
 makeGreen(resourcesLink);
