@@ -139,8 +139,19 @@ blogLink.href = "#";
 resourcesLink.textContent = "Resources";
 resourcesLink.href = "#";
 
-allNavLinks.appendChild(blogLink);
-allNavLinks.prepend(resourcesLink);
+nav.appendChild(blogLink);
+nav.prepend(resourcesLink);
 
 
+
+// stretch addEventListener
+
+const newButton = document.createElement("button");
+newButton.innerHTML = "Click me!";
+
+ctaText.appendChild(newButton);
+
+newButton.addEventListener("click", function(){
+  mainHeading.style.color = "#F20477";
+})
 
