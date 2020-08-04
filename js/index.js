@@ -142,7 +142,5 @@ resourcesLink.href = "#";
 allNavLinks.appendChild(blogLink);
 allNavLinks.prepend(resourcesLink);
 
-makeGreen(blogLink);
-makeGreen(resourcesLink);
 
 
