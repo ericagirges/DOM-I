@@ -110,7 +110,8 @@ const contactH4 = contact.querySelector("h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
 const contactTexts = contact.querySelectorAll("p");
-contactTexts[0].textContent = siteContent["contact"]["address"];
+const splitAddress = siteContent["contact"]["address"].split("Street ").join("Street<br />")
+contactTexts[0].innerHTML = splitAddress;
 contactTexts[1].textContent = siteContent["contact"]["phone"];
 contactTexts[2].textContent = siteContent["contact"]["email"];
 
